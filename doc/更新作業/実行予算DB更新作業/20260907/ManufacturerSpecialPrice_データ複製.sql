@@ -126,11 +126,7 @@ SET NOCOUNT ON;
 
 DECLARE @dbs TABLE (db sysname PRIMARY KEY);
 INSERT INTO @dbs (db) VALUES
-    ('NEW00000001NEWDB'),
-    ('NEW00000002NEWDB'),
-    ('NEW00000015NEWDB'),
-    ('NEW00000017NEWDB'),
-    ('NEW00000020NEWDB');
+    ('NEW0000005NEWDB');
 
 SELECT d.db                                             AS コピー先DB,
        CASE WHEN DB_ID(d.db) IS NULL THEN 0 ELSE 1 END  AS db_exists,
